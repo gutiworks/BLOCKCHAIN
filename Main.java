@@ -27,6 +27,8 @@ public class Main {
                     float amount = scanner.nextFloat();
                     scanner.nextLine(); // consume newline
 
+                    //BlockChain.addPendingTransaction(new Transaction(sender, receiver, amount));
+
                     ArrayList<Transaction> transactions = new ArrayList<>();
                     transactions.add(new Transaction(sender, receiver, amount));
 

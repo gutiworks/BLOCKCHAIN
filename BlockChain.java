@@ -2,7 +2,11 @@ import java.util.ArrayList;
 
 public class BlockChain {
     
+    //Main blockchain
     public static ArrayList<Block> blockchain = new ArrayList<>();
+    //Adding blocks
+    private ArrayList<Transaction> pendingTransactions = new ArrayList<>();
+    //Mining blocks
     public static int difficulty = 2;
     
     public static void addBlock(Block newBlock) {
@@ -34,5 +38,10 @@ public class BlockChain {
             System.out.println("Previous block : " + block.previousHash);
             System.out.println("Current transactions : " + Transaction.transactionToString(block.transactions));
         }
+    }
+
+    public void addPendingTransaction(Transaction tx) {
+        pendingTransactions.add(tx);
+        System.out.println(tx);
     }
 }

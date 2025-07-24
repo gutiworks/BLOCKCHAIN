@@ -10,8 +10,8 @@ public class Block {
     private long timeStamp;
     private int nonce;
 
-    public Block(ArrayList<Transaction> transactions, String previousHash) {
-        this.transactions = transactions;
+    public Block(String previousHash) {
+        this.transactions = new ArrayList<>();
         this.previousHash = previousHash;
         this.timeStamp = new Date().getTime();
         this.hash = calculateHash();

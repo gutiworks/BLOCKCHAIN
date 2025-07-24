@@ -17,7 +17,7 @@ public class Transaction {
     public static String transactionToString(ArrayList<Transaction> transactions) {
         StringBuilder stringBuilder = new StringBuilder();
         for (Transaction transaction : transactions) {
-            stringBuilder.append(transaction.sender + " -> " + transaction.reciver + ": " + transaction.amount);
+            stringBuilder.append(transaction.sender + " -> " + transaction.reciver + ": " + transaction.amount + "\n");
         }
         return stringBuilder.toString();
     }
